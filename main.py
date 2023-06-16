@@ -10,6 +10,11 @@ fonte = pygame.font.Font(None, 26)
 fundo = pygame.image.load("fundo.jpg")
 pygame.mixer.music.load("audio.mp3")
 pygame.mixer.music.play(-1)
+pygame.display.set_caption("Space do Jean")
+icon = pygame.image.load("icone.png")
+pygame.display.set_icon(icon)
+
+
 while running:
     for evento in pygame.event.get():
         if evento.type == pygame.QUIT:
