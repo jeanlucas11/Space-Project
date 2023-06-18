@@ -3,7 +3,7 @@ from tkinter import simpledialog
 
 pygame.init()
 
-estrelas = []
+textos = []
 tamanho = (800,500)
 branco = (255,255,255)
 tela =  pygame.display.set_mode( tamanho )
@@ -28,7 +28,11 @@ while running:
                 item = "desconhecido"+str(pos)
             if item is not None:
                 nome_estrela = item
-                print(item)
+                teste = {
+                    'nome': item,
+                    'pos': pos
+                }            
+                textos.append(teste)
 
     tela.blit(fundo, (0,0))
     texto1 = fonte.render("Pressione F10 para Salvar os Pontos: ",True, branco )
@@ -37,11 +41,9 @@ while running:
     tela.blit(texto1, (10,10))
     tela.blit(texto2, (10,30))
     tela.blit(texto3, (10,50))
-    texto_renderizado = fonte.render(nome_estrela, True, branco)
-    tela.blit(texto_renderizado, (pos))
-    
-    
-
-
+    for t in textos:
+        texto_renderizado = fonte.render(t['nome'], True, branco)
+        tela.blit(texto_renderizado, (t['pos']))
+        
     pygame.display.update()
 pygame.quit()
