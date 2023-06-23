@@ -72,7 +72,7 @@ while running:
             #         'nome': item,
             #         'pos': pos
             #     }            
-            #     textos.append(teste)    deixei comentado pois tem outro jeito, não sei se está totalmente certo!
+            #     textos.append(teste)    deixei comentado pois tem outro jeito, não sei se está totalmente certo, porque até uma parte deu certo!
         elif evento.type == pygame.KEYDOWN and evento.key == pygame.K_F10:
             salvarPontos()
         elif evento.type == pygame.KEYDOWN and evento.key == pygame.K_F11: 
@@ -105,7 +105,7 @@ while running:
     #     texto_renderizado = fonte.render(t['nome'], True, branco)
     #     tela.blit(texto_renderizado, (t['pos']))
     #     pygame.draw.circle(tela, branco, t['pos'], (5))
-    #     pygame.draw.line(tela, branco, t["pos"], pos, 1 ) deixei comentado pois tem outro jeito, não sei se está totalmente certo!
+    #     pygame.draw.line(tela, branco, t["pos"], pos, 1 ) deixei comentado pois tem outro jeito, não sei se está totalmente certo, porque até uma parte deu certo!
 
     pygame.display.update()
 pygame.quit()
