@@ -1,7 +1,6 @@
 import pygame
 from tkinter import simpledialog
 import json
-import os 
 
 pygame.init()
 
@@ -14,11 +13,11 @@ tela =  pygame.display.set_mode( tamanho )
 running = True
 fonte = pygame.font.Font(None, 26)
 fonteEstrela = pygame.font.Font(None, 24)
-fundo = pygame.image.load("fundo.jpg")
-pygame.mixer.music.load("audio.mp3")
+fundo = pygame.image.load("./assets/fundo.png")
+pygame.mixer.music.load("./assets/audio.mp3")
 pygame.mixer.music.play(-1)
 pygame.display.set_caption("Space do Jean")
-icon = pygame.image.load("icone.png")
+icon = pygame.image.load("./assets/icone.png")
 pygame.display.set_icon(icon)
 pos = pygame.mouse.get_pos()
 posicao = (0,0)
